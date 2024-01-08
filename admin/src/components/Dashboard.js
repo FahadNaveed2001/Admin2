@@ -4,7 +4,7 @@ import profileImage from '../Images/profile.png';
 
 const Dashboard = () => {
   return (
-    <div className="p-4 h-screen">
+    <div className="p-4 h-screen bg-white">
       <div className="mx-5 text-[white] text-[50px] font-bold">
         <h1>Home</h1>
       </div>
@@ -29,7 +29,7 @@ const Dashboard = () => {
         </div>
       </div>
     
-      <div className="bg-[#1C2C52] p-8 text-white col-span-1 md:col-span-3 rounded-3xl flex transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-indigo-500 duration-300">
+      <div className="bg-[#1C2C52] p-8 text-white col-span-1 md:col-span-3 rounded-3xl flex transition ease-in-out delay-150">
         <h3 className="text-[20px]">
           Is there an 'echo' of the big bang? The story of the prediction, serendipitous discovery and interpretation of the microwave radiation left over from the hot early beginnings of the universe. This radiation contains a wealth of information about the history and structure of the universe. It tells us its shape. It reveals the nature of the small lumps that eventually turned into galaxies. It tells us how fast we are moving. It events tells us about irregularities which no longer exist. In recent years there have been spectacular space missions to map this radiation with unprecedented accuracy and in the next year a new European PLANCK mission will be launched.
         </h3>

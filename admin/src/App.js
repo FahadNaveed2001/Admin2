@@ -4,19 +4,22 @@ import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard';
 import Accounts from './components/Accounts';
 import Charts from './components/Charts';
-import Footer from './components/Footer'
+
+import Sidebar from './components/Sidebar';
 
 const App = () => {
   return (
     <Router>
-      <div className='h-[120vh] bg-[#0F172A]'>
-        <Navbar />
+    <Navbar />
+ 
+      <div className='h-[120vh] flex bg-white'>
+      <Sidebar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/charts" element={<Charts />} />
         </Routes>
-        <Footer />
+
       </div>
     </Router>
   );

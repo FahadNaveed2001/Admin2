@@ -33,7 +33,7 @@ const chartConfig = {
 
 const Graph = () => {
   return (
-    <Card className="items-center w-[420px] bg-[#38bff828] mx-5">
+    <Card className="items-center w-[420px] bg-[#38bff828] mx-5 ">
       <CardHeader
         floated={false}
         shadow={false}

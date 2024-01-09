@@ -8,22 +8,21 @@ import Info from "./DashboardParts/Info";
 
 const Dashboard = () => {
   return (
-   
-    <div className="p-4 h-screen bg-white w-[100vw]">
+    <div className="p-4 bg-white min-h-screen w-full">
     <div className="mx-5 text-[#000000] text-[50px] font-bold">
       <h1>Dashboard</h1>
     </div>
-    <div className="w-screen flex mt-3">
-    <Graph /> 
-    <Graph3 />
-    <Info />
-    </div>
 
+    <div className="w-full flex flex-col items-center mt-3 sm:flex-row">
+      <Graph className="w-full mb-3 sm:w-1/3 sm:mb-0" />
+      <Graph3 className="w-full mb-3 sm:w-1/3 sm:mb-0" />
+      <Info className="w-full sm:w-1/3" />
+    </div>
  
-        <div className="flex bg-transparent text-black w-[1800px] ">
+    <div className="flex flex-col md:flex-row bg-transparent text-black w-full max-w-screen-xl mx-auto">
       
-        <div className="p-4 w-full">
-          <div className="grid grid-cols-12 gap-4 ">
+    <div className="p-4 w-full">
+    <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 sm:col-span-6 md:col-span-3 ">
             <div className="flex flex-row bg-[#38bff828] shadow-lg text-black rounded-2xl p-4 transition ease-in-out delay-150 hover:bg-[#38BDF8] duration-100">
                 <div className="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-blue-100 text-blue-500">
@@ -81,7 +80,7 @@ const Dashboard = () => {
      
       </div>
 
-      <Graph2 />
+      <Graph2 className="w-full" />
   </div>
 
 

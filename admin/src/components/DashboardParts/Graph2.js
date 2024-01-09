@@ -98,23 +98,22 @@ const chartConfig = {
 
 const Example = () => {
   return (
-    <Card className="w-[1750px] mx-4 bg-[#38bff828]">
-      <CardHeader
-        floated={false}
-        shadow={false}
-        color="transparent"
-        className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
-      >
-
-        <div>
-        <h1 className='text-[20px] font-bold'>Products </h1>
-        </div>
-      </CardHeader>
-      <CardBody className="px-2 pb-0">
-        <Chart {...chartConfig} />
-      </CardBody>
-    </Card>
-  );
+    <Card className="w-full sm:w-[90%] mx-4 bg-[#38bff828]">
+    <CardHeader
+      floated={false}
+      shadow={false}
+      color="transparent"
+      className="flex flex-col gap-2 md:flex-row md:items-center"
+    >
+      <div>
+        <h1 className="text-[20px] font-bold">Products</h1>
+      </div>
+    </CardHeader>
+    <CardBody className="px-2 pb-0">
+      <Chart {...chartConfig} />
+    </CardBody>
+  </Card>
+);
 };
 
 export default Example;

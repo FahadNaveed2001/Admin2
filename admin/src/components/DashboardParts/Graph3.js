@@ -29,7 +29,7 @@ const chartConfig = {
     dataLabels: {
       enabled: false,
     },
-    colors: ["#020617"],
+    colors: ["#38BDF8"],
     plotOptions: {
       bar: {
         columnWidth: "40%",
@@ -46,9 +46,9 @@ const chartConfig = {
       labels: {
         style: {
           colors: "#616161",
-          fontSize: "12px",
+          fontSize: "15px",
           fontFamily: "inherit",
-          fontWeight: 400,
+          fontWeight: 500,
         },
       },
       categories: [
@@ -98,7 +98,7 @@ const chartConfig = {
 
 const Example = () => {
   return (
-    <Card className="w-[1000px] bg-[#38bff828] items-center">
+    <Card className="w-[1000px] bg-[#38bff828] items-center h-[320px]">
       <CardHeader
         floated={false}
         shadow={false}

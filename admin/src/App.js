@@ -12,6 +12,7 @@ import Files from './components/Files';
 import NotificationSettings from "./components/Settings/NotificationSettings";
 import BillingSettings from "./components/Settings/BillingSettings";
 import TeamSettings from "./components/Settings/TeamSettings";
+import Tester from "./components/Tester"
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/team-settings" element={<TeamSettings/>} />
           <Route path="/notification-settings" element={<NotificationSettings/>} />
           <Route path="/billing-settings" element={<BillingSettings/>} />
+          <Route path="/tester" element={<Tester />} />
           
         </Routes>
 

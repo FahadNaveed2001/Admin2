@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { IoNotifications } from "react-icons/io5";
 import { BsStack } from "react-icons/bs";
@@ -11,6 +11,10 @@ import { SiGraphql } from "react-icons/si";
 import { PiGraphBold } from "react-icons/pi";
 import { ImParagraphLeft } from "react-icons/im";
 import { MdOutlineGraphicEq } from "react-icons/md";
+import { IoSettings } from "react-icons/io5";
+import { RiTeamFill } from "react-icons/ri";
+import { HiOutlineCash } from "react-icons/hi";
+
 
 const Navbar = () => {
 
@@ -67,6 +71,19 @@ const Navbar = () => {
             </button>
           </form>
           </div>
+
+
+
+
+
+          <div className="dropdown dropdown-bottom hover:bg-transparent">
+          <div tabIndex={0} role="button" className="btn bg-transparent border-none p-2 text-[25px] text-[#38BDF8] hover:bg-transparent hover:text-[#32718b]"><IoSettings /></div>
+    
+          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[250px] ml-[-320px] mt-[10px] divide-y divide-slate-700 ">
+            <li><a><Link to="/notification-settings"><IoNotifications />Notification Settings</Link></a></li>
+            <li><a><Link to="/billing-settings"><HiOutlineCash />Billing Settings</Link></a></li>
+          </ul>
+        </div>
           
           <div className="flex-none hidden lg:block align items-center">
             <ul className="menu menu-horizontal text-[black] px-2 mx-5">
@@ -104,6 +121,8 @@ const Navbar = () => {
                 <li><a>Item 2</a></li>
               </ul>
             </div>
+
+            
 
               </li>
               <li>

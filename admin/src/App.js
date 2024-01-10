@@ -9,7 +9,9 @@ import Sidebar from './components/Sidebar';
 import Inbox from './components/Inbox';
 import Schedule from './components/Schedule';
 import Files from './components/Files';
-import Settings from './components/Settings';
+import NotificationSettings from "./components/Settings/NotificationSettings";
+import BillingSettings from "./components/Settings/BillingSettings";
+import TeamSettings from "./components/Settings/TeamSettings";
 
 const App = () => {
   return (
@@ -23,9 +25,13 @@ const App = () => {
           <Route path="/inbox" element={<Inbox/>} />
           <Route path="/schedule" element={<Schedule/>} />
           <Route path="/files" element={<Files/>} />
-          <Route path="/settings" element={<Settings/>} />
+
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/charts" element={<Charts />} />
+          <Route path="/team-settings" element={<TeamSettings/>} />
+          <Route path="/notification-settings" element={<NotificationSettings/>} />
+          <Route path="/billing-settings" element={<BillingSettings/>} />
+          
         </Routes>
 
       </div>

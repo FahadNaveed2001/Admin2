@@ -2,37 +2,29 @@ import React from 'react';
 
 const Calendar5 = () => {
   return (
-    <div className="flex items-center justify-center py-8 px-4 b">
+    <div className="flex items-center justify-center py-7 px-4 ">
 
-      <div className="max-w-sm w-full shadow-lg">
-        <div className="md:p-8 p-5 dark:bg-gray-800 bg-white rounded-t">
-          <div className="px-4 flex items-center justify-between">
-            <span tabIndex="0" className="focus:outline-none text-base font-bold dark:text-gray-100 text-gray-800">12/March/2024</span>
+    <div className="max-w-sm w-full shadow-lg ">
+      <div className="md:p-8 p-3 dark:bg-gray-800 bg-white rounded-t">
+        <div className="px-4 flex items-center text-center">
+          <span tabIndex="0" className="font-bold text-gray-800 ">16/March/2024</span>
 
-          </div>
-          <div className="flex items-center justify-between pt-12 overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr>
-                  <th>
-                    <div className="w-full flex justify-center">
-                      <p className="text-[30px] font-Bold text-center text-gray-800 dark:text-gray-100">Monday</p>
-                    </div>
-                  </th>
+        </div>
+        <div className="flex items-center  pt-1 overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr>
+                <th>
+                  <div className="w-full flex justify-center">
+                    <p className="text-[30px] font-Bold text-center text-gray-800 dark:text-gray-100">Friday</p>
+                  </div>
+                </th>
 
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="pt-1">
-                    <div className="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
-                  </td>
+              </tr>
+            </thead>
 
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
         <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-[#38bff828] rounded-b">
           <div className="px-4">

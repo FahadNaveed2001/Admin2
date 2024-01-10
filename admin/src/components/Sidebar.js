@@ -4,9 +4,7 @@ import ChartIcon from './assets/Chart.png';
 import ChatIcon from './assets/Chat.png';
 import UserIcon from './assets/User.png';
 import CalendarIcon from './assets/Calendar.png';
-import SearchIcon from './assets/Search.png';
 import FolderIcon from './assets/Folder.png';
-import SettingIcon from './assets/Setting.png';
 import { FaBars } from "react-icons/fa";
 
 
@@ -20,7 +18,7 @@ const Sidebar = () => {
     { title: "Schedule", src: CalendarIcon, link: "/schedule" },
     { title: "Analytics", src: ChartIcon, link: "/charts" },
     { title: "Files", src: FolderIcon, gap: true, link: "/files" },
-    { title: "Setting", src: SettingIcon, link: "/settings" },
+
   ];
 
   return (
@@ -55,6 +53,7 @@ const Sidebar = () => {
                 </span>
               </Link>
             </li>
+            
           ))}
         </ul>
       </div>

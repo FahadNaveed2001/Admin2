@@ -20,7 +20,7 @@ const NotificationSettings = () => {
     <div className="mx-4 min-h-screen xl:mx-auto">
 
 
-    <h1 className="border-b py-6 text-4xl font-semibold">Settings</h1>
+    <h1 className="border-b py-6 text-4xl font-semibold text-center md:text-start lg:text-start">Settings</h1>
     <div className="w-full md:flex-row items-center lg:w-screen md:w-screen  md:pr-[80px] lg:pr-[80px] ">
       <div className="relative my-4 w-56 sm:hidden">
         <input

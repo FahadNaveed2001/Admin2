@@ -17,11 +17,11 @@ const NotificationSettings = () => {
     }));
   };
   return (
-    <div className="mx-4 min-h-screen max-w-screen-xl sm:mx-8 xl:mx-auto">
+    <div className="mx-4 min-h-screen xl:mx-auto">
 
 
     <h1 className="border-b py-6 text-4xl font-semibold">Settings</h1>
-    <div className="grid grid-cols-8 pt-3 sm:grid-cols-10">
+    <div className="w-full md:flex-row items-center lg:w-screen md:w-screen  md:pr-[80px] lg:pr-[80px] ">
       <div className="relative my-4 w-56 sm:hidden">
         <input
           className="peer hidden"
@@ -50,7 +50,7 @@ const NotificationSettings = () => {
         </div>
         <div className="grid border-b py-6 sm:grid-cols-2">
           <div className="">
-            <h2 className="text-lg font-semibold leading-4 text-slate-700">
+            <h2 className="text-lg font-bold leading-4 text-slate-700">
               Comments
             </h2>
             <p className="font- text-slate-600">
@@ -85,8 +85,8 @@ const NotificationSettings = () => {
 
         <div className="grid border-b py-6 sm:grid-cols-2">
         <div className="">
-          <h2 className="text-lg font-semibold leading-4 text-slate-700">
-            Comments
+          <h2 className="text-lg font-bold leading-4 text-slate-700">
+            Added To Cart
           </h2>
           <p className="font- text-slate-600">
             Lorem ipsum dolor, Alias eligendi laboriosam magni reiciendis
@@ -121,8 +121,8 @@ const NotificationSettings = () => {
 
       <div className="grid border-b py-6 sm:grid-cols-2">
       <div className="">
-        <h2 className="text-lg font-semibold leading-4 text-slate-700">
-          Comments
+        <h2 className="text-lg font-bold leading-4 text-slate-700">
+          Reviews
         </h2>
         <p className="font- text-slate-600">
           Lorem ipsum dolor, Alias eligendi laboriosam magni reiciendis
@@ -156,8 +156,8 @@ const NotificationSettings = () => {
 
     <div className="grid border-b py-6 sm:grid-cols-2">
     <div className="">
-      <h2 className="text-lg font-semibold leading-4 text-slate-700">
-        Comments
+      <h2 className="text-lg font-bold leading-4 text-slate-700">
+        Inbox
       </h2>
       <p className="font- text-slate-600">
         Lorem ipsum dolor, Alias eligendi laboriosam magni reiciendis

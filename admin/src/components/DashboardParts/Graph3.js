@@ -3,10 +3,10 @@ import {
   Card,
   CardBody,
   CardHeader,
-  Typography,
+
 } from "@material-tailwind/react";
 import Chart from "react-apexcharts";
-import { Square3Stack3DIcon } from "@heroicons/react/24/outline";
+
 
 const chartConfig = {
   type: "bar",
@@ -98,7 +98,7 @@ const chartConfig = {
 
 const Example = () => {
   return (
-    <Card className="w-[1000px] bg-[#38bff828] items-center h-[320px]">
+    <Card className="w-[420px] bg-[#38bff828] items-center h-[320px] md:w-[1000px]">
       <CardHeader
         floated={false}
         shadow={false}

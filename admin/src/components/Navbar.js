@@ -12,7 +12,7 @@ import { PiGraphBold } from "react-icons/pi";
 import { ImParagraphLeft } from "react-icons/im";
 import { MdOutlineGraphicEq } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
-import { RiTeamFill } from "react-icons/ri";
+
 import { HiOutlineCash } from "react-icons/hi";
 
 
@@ -29,27 +29,27 @@ const Navbar = () => {
         <div className="w-full navbar bg-[white] h-[7vh] z-10 border-b-2">
           <div className="flex-none">
           </div>
-          <div className="flex-1 px-7 text-[#38BDF8] text-[30px] font-bold">
+          <div className="flex-1 px-3 text-[#38BDF8] text-[20px] font-bold md:text-[30px] md:px-7">
             Admin.com
 
 
-            <form className="ml-[30px] flex items-center">
+            <form className="ml-[10px] items-center display-none hidden md:flex lg:flex">
               <label htmlFor="simple-search" className="sr-only">
                 Search
               </label>
-              <div className="relative w-full ">
+              <div className="relative w-full">
 
                 <input
                   type="text"
                   id="simple-search"
-                  className="h-[35px] mt-[10px] w-[350px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="h-[35px] w-[100px] md:w-[350px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Search..."
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="mt-[10px] p-2.5 ms-2 text-sm font-medium text-white bg-[#38BDF8] rounded-lg border transition duration-300 ease-in-out hover:bg-[#226581] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className=" p-2.5 ms-2 text-sm font-medium text-white bg-[#38BDF8] rounded-lg border transition duration-300 ease-in-out hover:bg-[#226581] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 
               >
                 <svg
@@ -76,20 +76,21 @@ const Navbar = () => {
 
 
 
-          <div className="dropdown dropdown-bottom hover:bg-transparent">
-            <div tabIndex={0} role="button" className="btn bg-transparent border-none p-2 text-[25px] text-[#38BDF8] hover:bg-transparent hover:text-[#32718b]"><IoSettings /></div>
 
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[250px] ml-[-320px] mt-[10px] divide-y divide-slate-700 ">
-              <li><a><Link to="/notification-settings"><IoNotifications />Notification Settings</Link></a></li>
-              <li><a><Link to="/billing-settings"><HiOutlineCash />Billing Settings</Link></a></li>
-            </ul>
-          </div>
 
-          <div className="flex-none hidden lg:block align items-center">
-            <ul className="menu menu-horizontal text-[black] px-2 mx-5">
+          <div className="flex-none items-center">
+          <div className="dropdown dropdown-bottom">
+          <div tabIndex={0} role="button" className=" btn bg-transparent border-none p-2 text-[20px] text-[#38BDF8] hover:bg-transparent hover:text-[#32718b] ml-[-50px] md:ml-[0]"><IoSettings /></div>
+
+          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[250px] ml-[-190px] mt-[10px] divide-y divide-slate-700 ">
+            <li><a><Link to="/notification-settings"><IoNotifications />Notification Settings</Link></a></li>
+            <li><a><Link to="/billing-settings"><HiOutlineCash />Billing Settings</Link></a></li>
+          </ul>
+        </div>
+            <ul className="menu menu-horizontal text-[black] md:px-2 md:mx-5">
               <li className="text-[20px] mt-[-2px]">
                 <div className="dropdown dropdown-bottom hover:bg-transparent ">
-                  <div tabIndex={0} role="button" className="btn bg-transparent border-none p-2 text-[20px] text-[#38BDF8] hover:bg-transparent hover:text-[#32718b]"><BsStack /></div>
+                  <div tabIndex={0} role="button" className="btn bg-transparent border-none p-2 text-[20px] text-[#38BDF8] hover:bg-transparent hover:text-[#32718b]  md:ml-[0]"><BsStack /></div>
                   <ul tabIndex={0} className="grid grid-cols-3 gap-8 dropdown-content z-[1] menu p-5 shadow bg-base-100 rounded-box w-[300px] ml-[-220px] mt-[10px] items-center ">
 
                     <li><a className="text-[25px] text-[#6B7280] items-center"><IoStatsChart /></a></li>
@@ -232,6 +233,8 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
+
+        
       </div>
 
 

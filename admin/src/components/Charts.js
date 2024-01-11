@@ -47,8 +47,8 @@ const Charts = () => {
 
 
   return (
-    <div className='p-8 h-[100vh] w-[90vw]'>
-    <div className='px-[80px]  text-[#000000] text-[50px] mb-[50px] font-bold'><h1>Stats of your Six months</h1></div>
+    <div className='p-8 md:h-[100vh] md:w-[90vw]'>
+    <div className='px-[70px]  text-[#000000] text-[20px] text-center md:text-[50px] md:text-start mb-[50px] font-bold'><h1>Stats of your Six months</h1></div>
    
     <ResponsiveContainer width="100%" height="80%">
     <BarChart
@@ -63,7 +63,7 @@ const Charts = () => {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" className='font-bold mt-2'/>
+      <XAxis dataKey="name" className='md:font-bold font-semibold mt-2'/>
       <YAxis className='font-bold'/>
       <Tooltip />
       <Legend />

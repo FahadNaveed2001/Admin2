@@ -5,8 +5,8 @@ const Accounts = () => {
 
   
   return (
-    <div className='p-4 h-[100vh] bg-white w-screen'>
-    <div className=' mx-5 text-[black] text-[50px] font-bold'><h1>Accounts Information</h1></div>
+    <div className=' p-1 h-[100vh] bg-white w-screen'>
+    <div className=' text-[black] text-[20px] text-center font-bold md:text-start md:p-4 md:text-[50px]'><h1>Accounts Information</h1></div>
     
     
 
@@ -16,7 +16,7 @@ const Accounts = () => {
     
     
     
-    <div className="overflow-x-auto mx-5">
+    <div className="overflow-x-auto">
   <table className="table table-xs text-[black] mt-6 ">
     <thead>
       <tr className='text-[black] text-[18px]'>

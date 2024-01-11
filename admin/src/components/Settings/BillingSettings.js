@@ -3,23 +3,10 @@ import React from "react";
 const BillingSettings = () => {
   return (
     <div className="w-screen">
-      <div className="mx-4 max-w-screen-xl sm:mx-8 xl:mx-auto">
+      <div className="max-w-screen-xl md:items-center lg:items-center items-center lg:w-screen md:w-screen ">
         <h1 className="border-b py-6 text-4xl font-semibold">Settings</h1>
-        <div className="grid grid-cols-8 pt-3 pb-10 sm:grid-cols-10">
-          <div className="relative my-4 w-56 sm:hidden">
-            <input
-              className="peer hidden"
-              type="checkbox"
-              name="select-1"
-              id="select-1"
-            />
-            <label
-              htmlFor="select-1"
-              className="flex w-full cursor-pointer select-none rounded-lg border p-2 px-3 text-sm text-gray-700 ring-blue-700 peer-checked:ring"
-            >
-              Accounts{" "}
-            </label>
-          </div>
+        <div className="w-full md:flex-row items-center lg:w-screen md:w-screen  md:pr-[80px] lg:pr-[80px] ">
+
 
           <div className="col-span-8 rounded-xl sm:bg-gray-50 sm:px-8 sm:shadow">
             <div className="pt-4">

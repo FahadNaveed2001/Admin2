@@ -197,7 +197,7 @@ const Navbar = () => {
 
                   <ul
                     tabIndex={0}
-                    className="dropdown-content  shadow bg-base-100 rounded-box ml-[-150px] mt-[10px]"
+                    className="dropdown-content  shadow bg-base-100 rounded-box ml-[-150px] mt-[10px] "
                   >
                     <li>
                       <a className="hover:bg-[#33c2ff]">

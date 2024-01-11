@@ -2,7 +2,7 @@ import React from 'react';
 
 const Calendar4 = () => {
   return (
-    <div className="flex items-center justify-center py-7 px-4 ">
+    <div className="flex items-center justify-center py-7 px-4">
 
       <div className="max-w-sm w-full shadow-lg ">
         <div className="md:p-8 p-3 dark:bg-gray-800 bg-white rounded-t">

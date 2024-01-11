@@ -98,7 +98,7 @@ const chartConfig = {
 
 const Example = () => {
   return (
-    <Card className="w-[420px] mx-2 bg-[#38bff828] md:w-[1760px] md:mx-4">
+    <Card className="w-[390px]  bg-[#38bff828] md:w-[1760px] md:mx-4 lg:w-[1130px] xl:w-[1760px]">
     <CardHeader
       floated={false}
       shadow={false}

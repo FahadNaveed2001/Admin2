@@ -2,7 +2,7 @@ import React from "react";
 
 const BillingSettings = () => {
   return (
-    <div className="mx-4 w-screen">
+    <div className="pl-2 pr-2 w-[400px]">
       <div className="max-w-screen-xl md:items-center lg:items-center items-center lg:w-screen md:w-screen ">
         <h1 className="border-b py-6 text-4xl font-semibold text-center md:text-start lg:text-start">Settings</h1>
         <div className="w-full md:flex-row items-center lg:w-screen md:w-screen  md:pr-[80px] lg:pr-[80px] ">

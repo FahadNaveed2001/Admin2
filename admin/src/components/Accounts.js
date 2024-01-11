@@ -5,7 +5,7 @@ const Accounts = () => {
 
   
   return (
-    <div className=' p-1 h-[100vh] bg-white w-screen'>
+    <div className=' p-1 h-[100vh] bg-white w-[390px] lg:w-[1100px] xl:w-[1750px]'>
     <div className=' text-[black] text-[20px] text-center font-bold md:text-start md:p-4 md:text-[50px]'><h1>Accounts Information</h1></div>
     
     

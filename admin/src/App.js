@@ -19,7 +19,7 @@ const App = () => {
     <Router>
     <Navbar />
  
-      <div className='h-screen flex bg-white overflow-x-hidden'>
+      <div className='h-screen w-screen flex bg-white overflow-x-hidden'>
       <Sidebar />
         <Routes>
           <Route path="/" element={<Dashboard />} />

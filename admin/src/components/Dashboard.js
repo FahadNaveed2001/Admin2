@@ -8,15 +8,15 @@ import Info from "./DashboardParts/Info";
 
 const Dashboard = () => {
   return (
-    <div className="p-4 bg-white ">
+    <div className="p-4 bg-white w-screen lg:w-screen xl:w-screen">
     <div className="mx-5 text-[#000000] text-[30px] font-bold text-center md:text-start md:text-[50px] lg:text-[50px]">
       <h1>Dashboard</h1>
     </div>
 
 
-    <div className="p-4 w-full">
+    <div className="p-4 w-full lg:w-[1150px] xl:w-[1800px]">
     <div className="grid grid-cols-12 gap-4  ">
-            <div className="col-span-12 sm:col-span-6 md:col-span-3 ">
+            <div className="col-span-12 sm:col-span-6 md:col-span-3">
             <div className="flex flex-row bg-[#38bff828] shadow-lg text-black rounded-2xl p-4 transition ease-in-out delay-150  duration-100">
                 <div className="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-blue-100 text-blue-500">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-    <div className="w-full flex flex-col items-center mt-3 sm:flex-row gap-1 ">
+    <div className="w-full flex flex-col items-center mt-3 sm:flex-row gap-1 lg-[1150px]">
     <div>
       <Graph />
       </div>

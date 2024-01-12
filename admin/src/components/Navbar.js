@@ -1,17 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoNotifications } from "react-icons/io5";
-import { BsStack } from "react-icons/bs";
-import { IoStatsChart } from "react-icons/io5";
-import { TfiStatsUp } from "react-icons/tfi";
-import { MdQueryStats } from "react-icons/md";
-import { ImParagraphJustify } from "react-icons/im";
-import { ImStatsDots } from "react-icons/im";
-import { SiGraphql } from "react-icons/si";
-import { PiGraphBold } from "react-icons/pi";
-import { ImParagraphLeft } from "react-icons/im";
-import { MdOutlineGraphicEq } from "react-icons/md";
-import { IoSettings } from "react-icons/io5";
 import { RiDashboardFill } from "react-icons/ri";
 import { MdSwitchAccount } from "react-icons/md";
 import { MdOutlineForwardToInbox } from "react-icons/md";
@@ -23,15 +12,27 @@ import Dropdown2 from "./Navbaritems/DropDown2";
 import Dropdown3 from "./Navbaritems/DropDown3";
 import Dropdown4 from "./Navbaritems/DropDown4";
 import { BiLogOutCircle } from "react-icons/bi";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
     <div className="drawer ">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="navbar bg-[white] h-[7vh] z-10 border-b-2">
+        
+        
+        <div className="navbar bg-[white] h-[7vh] z-3 border-b-2">
+          
+          
+          {/*sidebar open button*/}
+          <button
+            onClick={toggleSidebar}
+            aria-label="toggle sidebar"
+            className="btn btn-square btn-ghost hidden md:flex lg:flex text-[30px] ml-[.7%] text-[#38BDF8]"
+          >
+            {isSidebarOpen ? <FaTimes /> : <FaBars />}
+          </button>
           <div className="flex-none lg:hidden md:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -93,18 +94,18 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-          <div>
-          <Dropdown1 />
-          </div>
-          <div>
-          <Dropdown2 />
-          </div>
-          <div>
-          <Dropdown3 />
-          </div>
-          <div className="mt-[-10px]">
-          <Dropdown4 />
-          </div>
+            <div>
+              <Dropdown1 />
+            </div>
+            <div>
+              <Dropdown2 />
+            </div>
+            <div>
+              <Dropdown3 />
+            </div>
+            <div className="mt-[-10px]">
+              <Dropdown4 />
+            </div>
           </div>
         </div>
       </div>
@@ -116,14 +117,16 @@ const Navbar = () => {
           className="drawer-overlay"
         ></label>
         <ul className="menu py-[70px] w-60 min-h-full bg-[#292929ec]  text-white gap-2">
-        <li>    <div className="avatar flex flex-col">
-        <div className="w-[100px] rounded-full ring ring-[#38BDF8] ring-offset-base-100 ring-offset-2 mt-[5px] " >
-          <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-         
-        </div>
-        <h1>User@gmail.com</h1>
-        <div className="border-b-2 border-white w-[100px] h-1"></div>
-      </div></li>
+          <li>
+            {" "}
+            <div className="avatar flex flex-col">
+              <div className="w-[100px] rounded-full ring ring-[#38BDF8] ring-offset-base-100 ring-offset-2 mt-[5px] ">
+                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+              <h1>User@gmail.com</h1>
+              <div className="border-b-2 border-white w-[100px] h-1"></div>
+            </div>
+          </li>
           <li className="flex flex-row">
             <a>
               <Link to="/" className="flex gap-2">
@@ -157,13 +160,13 @@ const Navbar = () => {
             </a>
           </li>
           <li className="flex flex-row">
-          <a>
-            <Link to="/charts" className="flex gap-2">
-              <IoBarChart className="mt-[5px]" />
-              Analytics
-            </Link>
-          </a>
-        </li>
+            <a>
+              <Link to="/charts" className="flex gap-2">
+                <IoBarChart className="mt-[5px]" />
+                Analytics
+              </Link>
+            </a>
+          </li>
 
           <li className="flex flex-row">
             <a>
@@ -182,15 +185,14 @@ const Navbar = () => {
             </a>
           </li>
 
-
           <li className="mt-[100%]">
-          <a>
-            <Link to="/Logout" className="flex gap-2">
-              <BiLogOutCircle className="mt-[5px]" />
-              Logout
-            </Link>
-          </a>
-        </li>
+            <a>
+              <Link to="/Logout" className="flex gap-2">
+                <BiLogOutCircle className="mt-[5px]" />
+                Logout
+              </Link>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

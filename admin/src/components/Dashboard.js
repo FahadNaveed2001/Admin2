@@ -8,7 +8,7 @@ import Info from "./DashboardParts/Info";
 
 const Dashboard = () => {
   return (
-    <div className="p-4 bg-white w-screen lg:w-screen xl:w-screen overflow-hidden">
+    <div className="p-4 bg-white w-screen lg:w-screen xl:w-screen overflow-hidden md:mx-auto">
     <div className="mx-5 text-[#000000] text-[30px] font-bold text-center md:text-start md:text-[50px] lg:text-[50px]">
       <h1>Dashboard</h1>
     </div>

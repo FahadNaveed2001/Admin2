@@ -39,7 +39,7 @@ const Dropdown2 = () => {
   }, []);
 
   return (
-    <div className="relative inline-block text-left" ref={dropdownRef}>
+    <div className="relative inline-block text-left " ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
         type="button"
@@ -53,7 +53,7 @@ const Dropdown2 = () => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lgring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lgring-1 ring-black ring-opacity-5 focus:outline-none z-10"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"

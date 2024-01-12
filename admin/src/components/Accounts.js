@@ -5,7 +5,7 @@ const Accounts = () => {
 
   
   return (
-    <div className=' p-1 h-[100vh] bg-white w-[390px] lg:w-[1100px] xl:w-[1750px]'>
+    <div className=' p-1 h-[100vh] bg-white w-[390px] lg:w-[1100px] xl:w-[1750px] md:ml-[50px]'>
     <div className=' text-[black] text-[20px] text-center font-bold md:text-start md:p-4 md:text-[50px]'><h1>Accounts Information</h1></div>
     
     
@@ -300,42 +300,7 @@ const Accounts = () => {
       <td>6/23/2020</td> 
       <td>Green</td>
     </tr>
-    <tr>
-      <th>31</th> 
-      <td>Andy Tipple</td> 
-      <td>Librarian</td> 
-      <td>Hilpert Group</td> 
-      <td>Poland</td> 
-      <td>7/9/2020</td> 
-      <td>Indigo</td>
-    </tr>
-    <tr>
-      <th>32</th> 
-      <td>Sophi Biles</td> 
-      <td>Recruiting Manager</td> 
-      <td>Gutmann Inc</td> 
-      <td>Indonesia</td> 
-      <td>2/12/2021</td> 
-      <td>Maroon</td>
-    </tr>
-    <tr>
-      <th>33</th> 
-      <td>Florida Garces</td> 
-      <td>Web Developer IV</td> 
-      <td>Gaylord, Pacocha and Baumbach</td> 
-      <td>Poland</td> 
-      <td>5/31/2020</td> 
-      <td>Purple</td>
-    </tr>
-    <tr>
-      <th>34</th> 
-      <td>Maribeth Popping</td> 
-      <td>Analyst Programmer</td> 
-      <td>Deckow-Pouros</td> 
-      <td>Portugal</td> 
-      <td>4/27/2021</td> 
-      <td>Aquamarine</td>
-    </tr>
+  
     
  
  

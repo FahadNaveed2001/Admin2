@@ -2,10 +2,10 @@ import React from "react";
 
 const Inbox = () => {
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="ml-[20px] flex flex-col overflow-hidden">
       <h1 className="text-[20px] font-bold text-center pt-4 px-6 md:text-start md:text-[50px]">Inbox</h1>
-      <main className="flex w-full h-full shadow-lg rounded-3xl items-center">
-        <section className="flex flex-col pt-3 w-[500px] bg-[#38bff80e] h-full lg:w-screen md:w-screen md:items-center] md:pr-[100px] lg:pr-[100px] ">
+      <main className="flex w-full h-full shadow-lg rounded-3xl items-center md:w-[98%]">
+        <section className="flex flex-col pt-3 w-[500px] bg-[#38bff80e] h-full lg:w-screen md:w-screen md:items-center]">
           <label className="px-3">
             <input
               className="rounded-lg p-4 bg-gray-100 transition duration-200 focus:outline-none focus:ring-2 w-full"

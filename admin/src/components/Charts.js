@@ -47,7 +47,7 @@ const Charts = () => {
 
 
   return (
-    <div className='p-2 w-[500px] md:h-[100vh] md:w-[90vw] ml-[-25px]'>
+    <div className='p-2 w-[500px] md:h-[100vh] md:w-[90vw] ml-[-25px] md:ml-[0]'>
     <div className='px-[30px]  text-[#000000] text-[20px] text-center md:text-[50px] md:text-start mb-[50px] font-bold'><h1>Stats of your Six months</h1></div>
    
     <ResponsiveContainer width="100%" height="80%">

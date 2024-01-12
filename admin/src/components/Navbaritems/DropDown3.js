@@ -55,253 +55,80 @@ const Dropdown1 = () => {
         aria-haspopup="true"
         aria-expanded="true"
       >
-        <IoNotifications />
+        <div>
+          <div className="absolute left-5 top-1 h-5 w-5 bg-red-500 rounded-full">
+          <h1 className="text-sm text-white p-1 mt-[-4px] font-light">3</h1>
+          </div>
+          <div>
+            <IoNotifications />
+          </div>
+        </div>
       </button>
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 md:w-[500px] px-5"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"
         >
-          <div
-            className="dropdown-content  shadow bg-base-100 rounded-box "
-            role="none"
-          >
-            <li className="md:w-[360px]  px-6 pb-6">
-              <a className="hover:bg-[#33c2ff]">
-                <div
-                  id="toast-notification"
-                  className="w-full max-w-xs p-4 text-gray-900 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300"
-                  role="alert"
-                >
-                  <div className="flex items-center mb-3">
-                    <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">
-                      New notification
-                    </span>
-                    <button
-                      type="button"
-                      className="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-                      data-dismiss-target="#toast-notification"
-                      aria-label="Close"
-                    >
-                      <span className="sr-only">Close</span>
-                      <svg
-                        className="w-3 h-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 14"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="relative inline-block shrink-0">
-                      <img
-                        className="w-12 h-12 rounded-full"
-                        src="/docs/images/people/profile-picture-3.jpg"
-                        alt="Jese Leos image"
-                      />
-                      <span className="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full">
-                        <svg
-                          className="w-3 h-3 text-white"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 18"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <span className="sr-only">Message icon</span>
-                      </span>
-                    </div>
-                    <div className="ms-3 text-sm font-normal">
-                      <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                        Bonnie Green
-                      </div>
-                      <div className="text-sm font-normal">
-                        commented on your photo
-                      </div>
-                      <span className="text-xs font-medium text-blue-600 dark:text-blue-500">
-                        a few seconds ago
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li className="md:w-[360px]  px-6 pb-6">
-              <a className="hover:bg-[#33c2ff]">
-                <div
-                  id="toast-notification"
-                  className="w-full max-w-xs p-4 text-gray-900 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300"
-                  role="alert"
-                >
-                  <div className="flex items-center mb-3">
-                    <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">
-                      New notification
-                    </span>
-                    <button
-                      type="button"
-                      className="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-                      data-dismiss-target="#toast-notification"
-                      aria-label="Close"
-                    >
-                      <span className="sr-only">Close</span>
-                      <svg
-                        className="w-3 h-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 14"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="relative inline-block shrink-0">
-                      <img
-                        className="w-12 h-12 rounded-full"
-                        src="/docs/images/people/profile-picture-3.jpg"
-                        alt="Jese Leos image"
-                      />
-                      <span className="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full">
-                        <svg
-                          className="w-3 h-3 text-white"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 18"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <span className="sr-only">Message icon</span>
-                      </span>
-                    </div>
-                    <div className="ms-3 text-sm font-normal">
-                      <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                        Bonnie Green
-                      </div>
-                      <div className="text-sm font-normal">
-                        commented on your photo
-                      </div>
-                      <span className="text-xs font-medium text-blue-600 dark:text-blue-500">
-                        a few seconds ago
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li className="md:w-[360px]  px-6 pb-6">
-              <a className="hover:bg-[#33c2ff]">
-                <div
-                  id="toast-notification"
-                  className="w-full max-w-xs p-4 text-gray-900 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300"
-                  role="alert"
-                >
-                  <div className="flex items-center mb-3">
-                    <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">
-                      New notification
-                    </span>
-                    <button
-                      type="button"
-                      className="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-                      data-dismiss-target="#toast-notification"
-                      aria-label="Close"
-                    >
-                      <span className="sr-only">Close</span>
-                      <svg
-                        className="w-3 h-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 14"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="relative inline-block shrink-0">
-                      <img
-                        className="w-12 h-12 rounded-full"
-                        src="/docs/images/people/profile-picture-3.jpg"
-                        alt="Jese Leos image"
-                      />
-                      <span className="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full">
-                        <svg
-                          className="w-3 h-3 text-white"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 18"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <span className="sr-only">Message icon</span>
-                      </span>
-                    </div>
-                    <div className="ms-3 text-sm font-normal">
-                      <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                        Bonnie Green
-                      </div>
-                      <div className="text-sm font-normal">
-                        commented on your photo
-                      </div>
-                      <span className="text-xs font-medium text-blue-600 dark:text-blue-500">
-                        a few seconds ago
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </div>
+
+    <div className="flex justify-between px-3 py-1 bg-[#38bff828] items-center gap-1 rounded-lg border border-gray-100 my-3">
+        <div className="relative w-16 h-16 rounded-full hover:bg-red-700 bg-gradient-to-r from-purple-400 via-blue-500 to-red-400 ">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-gray-200 rounded-full border-2 border-white">
+                <img className="w-full h-full object-cover rounded-full" src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg" alt="" />
+            </div>
         </div>
+        <div>
+            <span className="font-mono">Emma would like to connect with you</span>
+        </div>
+        <div className="flex gap-2">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+            </button>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+            </button>
+        </div>
+    </div>
+
+    <div className="flex justify-between px-3 py-1 bg-[#38bff828] items-center gap-1 rounded-lg border border-gray-100 my-3">
+        <div className="relative w-16 h-16 rounded-full hover:bg-red-700 bg-gradient-to-r from-purple-400 via-blue-500 to-red-400 ">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-gray-200 rounded-full border-2 border-white">
+                <img className="w-full h-full object-cover rounded-full" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""/>
+            </div>
+        </div>
+        <div>
+            <span className="font-mono">Tom liked one of your comments</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+
+    <div className="flex justify-between px-3 py-1 bg-[#38bff828] items-center gap-1 rounded-lg border border-gray-100 my-3">
+        <div className="relative w-16 h-16 rounded-full hover:bg-red-700 bg-gradient-to-r from-purple-400 via-blue-500 to-red-400 ">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-gray-200 rounded-full border-2 border-white">
+                <img className="w-full h-full object-cover rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""/>
+            </div>
+        </div>
+        <div>
+            <span className="font-mono">Andrea posted a new Tweet have a look</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+            </svg>
+        </div>
+    </div>
+</div>
+
       )}
     </div>
   );

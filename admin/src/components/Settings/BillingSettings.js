@@ -2,15 +2,15 @@ import React from "react";
 
 const BillingSettings = () => {
   return (
-    <div className="pl-2 pr-2 w-[400px]">
+    <div className="pl-2 pr-2 w-[400px] overflow-hidden  md:w-screen">
       <div className="max-w-screen-xl md:items-center lg:items-center items-center lg:w-screen md:w-screen ">
-        <h1 className="border-b py-6 text-4xl font-semibold text-center md:text-start lg:text-start">Settings</h1>
+        <h1 className="border-b py-6 text-4xl font-semibold text-center md:text-start lg:text-start md:pl-[37px]">Settings</h1>
         <div className="w-full md:flex-row items-center lg:w-screen md:w-screen  md:pr-[80px] lg:pr-[80px] ">
 
 
           <div className="col-span-8 rounded-xl sm:bg-gray-50 sm:px-8 sm:shadow">
             <div className="pt-4">
-              <h1 className="py-2 text-2xl font-semibold">Billing settings</h1>
+              <h1 className="py-2 text-2xl font-semibold ">Billing settings</h1>
               <hr className="mt-4 mb-8" />
 
               <div className="mb-10 grid gap-y-8 lg:grid-cols-2 lg:gap-y-0">
@@ -101,8 +101,8 @@ const BillingSettings = () => {
                 </div>
               </div>
 
-              <div className="amx-auto mb-10 overflow-hidden rounded-lg border bg-white">
-                <p className="mb-6 bg-gray-100 py-1 text-center text-lg font-medium">
+              <div className="mx-auto  overflow-hidden rounded-lg border bg-white">
+                <p className="mb-6 bg-gray-100 py-1 text-center text-lg font-medium ">
                   Billing History
                 </p>
                 <table className="w-full">
@@ -110,7 +110,7 @@ const BillingSettings = () => {
                     <td className="text-center font-semibold">Date</td>
                     <td className="text-center font-semibold">Invoice #</td>
                     <td className="text-center font-semibold">Amount</td>
-                    <td className="text-center font-semibold"></td>
+                
                   </thead>
                   <tbody>
                     <tr>

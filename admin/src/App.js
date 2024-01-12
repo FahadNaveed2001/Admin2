@@ -16,12 +16,19 @@ import Tester from "./components/Tester"
 
 
 const App = () => {
+  const [isSidebarOpen, setSidebarOpen] = React.useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
+
   return (
     <Router>
-    <Navbar />
+      <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
  
       <div className='flex bg-white'>
-      <Sidebar />
+      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/inbox" element={<Inbox/>} />

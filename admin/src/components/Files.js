@@ -5,7 +5,7 @@ import { IoLogoDropbox } from "react-icons/io5";
 
 const Files = () => {
   return (
-    <div className="flex flex-col lg:w-screen md:w-screen overflow-hidden">
+    <div className="flex flex-col lg:w-screen md:w-screen overflow-hidden items-center md:pl-[70px]">
       <div className="flex flex-col font-bold text-[30px] w-screen md:flex-row items-center p-4 lg:w-screen md:w-screen md:text-[50px] lg:text-[50px]">
         File Manager
       </div>
@@ -15,7 +15,7 @@ const Files = () => {
         </button>
       </div>
 
-      <div className="flex flex-col pr-[20px] w-screen md:flex-row items-center p-1 lg:w-screen md:w-screen lg:pr-[100px] md:pr-[100px]">
+      <div className="flex flex-col  w-screen md:flex-row items-center p-1 lg:w-screen md:w-screen lg:pr-[100px] md:pr-[100px]">
         <div className="flex-1 p-2 md:w-1/3 w-full">
           {" "}
           <div className="col-span-12 sm:col-span-6 md:col-span-3 ">
@@ -82,8 +82,11 @@ const Files = () => {
       </div>
 
       {/* Div 2 */}
-      <div className=" p-1 h-[100vh] bg-white w-[390px] lg:w-[1100px] xl:w-[1750px]">
-        <div className="overflow-x-auto">
+      <div className=" p-1 h-[80vh] bg-white w-[390px] lg:w-[1100px] xl:w-[1750px]">
+      <div className="flex flex-col font-bold text-[20px] w-screen md:flex-row items-center p-3 lg:w-screen md:w-screen md:text-[20px] lg:text-[20px]">
+        Upload History
+      </div>
+        <div className="overflow-x-hidden">
           <table className="table table-xs text-[black] mt-6 ">
             {" "}
             <thead>

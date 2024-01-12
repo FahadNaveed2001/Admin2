@@ -13,6 +13,8 @@ import Dropdown3 from "./Navbaritems/DropDown3";
 import Dropdown4 from "./Navbaritems/DropDown4";
 import { BiLogOutCircle } from "react-icons/bi";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { IoSettings } from "react-icons/io5";
+
 
 const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
@@ -116,7 +118,7 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu py-[70px] w-60 min-h-full bg-[#292929ec]  text-white gap-2">
+        <ul className="menu py-[70px] w-60 min-h-full bg-[#292929ec]  text-white gap-2 ">
           <li>
             {" "}
             <div className="avatar flex flex-col">
@@ -168,6 +170,13 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
             </a>
           </li>
 
+
+          <li>
+          <details>
+          <summary>
+          <IoSettings /> Settings
+          </summary>
+          <ul className="bg-transparent rounded-t-none  ">
           <li className="flex flex-row">
             <a>
               <Link to="/notification-settings" className="flex gap-2">
@@ -184,6 +193,9 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
               </Link>
             </a>
           </li>
+          </ul>
+        </details>
+          </li>
 
           <li className="mt-[100%]">
             <a>
@@ -193,6 +205,7 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
               </Link>
             </a>
           </li>
+          
         </ul>
       </div>
     </div>

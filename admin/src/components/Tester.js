@@ -1,79 +1,100 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaBars, FaCaretDown } from 'react-icons/fa';
+import ChartIcon from './assets/Chart.png';
+import ChatIcon from './assets/Chat.png';
+import UserIcon from './assets/User.png';
+import CalendarIcon from './assets/Calendar.png';
+import FolderIcon from './assets/Folder.png';
+import { IoSettings } from "react-icons/io5";
+import { IoNotifications } from "react-icons/io5";
+import { HiOutlineCash } from "react-icons/hi";
 
-const Dropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
+  const Menus = [
+    { title: 'Dashboard', src: ChartIcon, link: '/' },
+    { title: 'Accounts', src: UserIcon, gap: true, link: '/accounts' },
+    { title: 'Inbox', src: ChatIcon, link: '/inbox' },
+    { title: 'Schedule', src: CalendarIcon, link: '/schedule' },
+    { title: 'Analytics', src: ChartIcon, link: '/charts' },
+    { title: 'Files', src: FolderIcon, gap: true, link: '/files' },
+    // Dropdown Menu
+    {
+      title: 'Settings',
+      dropdown: true,
+      icon:  <IoSettings />,
+      items: [
+        { title: 'Link 1', link: '/notification-settings', icon: <IoNotifications /> },
+        { title: 'Link 2', link: '/billing-settings', icon:  <HiOutlineCash /> },
+      ],
+    },
+  ];
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const handleDropdownClick = () => {
+    if (!isSidebarOpen) {
+      toggleSidebar();
+    }
   };
-
-  const closeDropdown = () => {
-    setIsOpen(false);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        closeDropdown();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   return (
-    <div className="relative inline-block text-left ml-[200px]" ref={dropdownRef}>
-      <button
-        onClick={toggleDropdown}
-        type="button"
-        className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-        id="options-menu"
-        aria-haspopup="true"
-        aria-expanded="true"
+    <div className="flex bg-[#292929] h-[120vh] z-20 mt-">
+      <div
+        className={`${
+          isSidebarOpen ? 'w-52' : 'hidden md:w-20'
+        } p-4 pt-8 relative duration-300 md:block`}
       >
-        Menu
-      </button>
-
-      {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="options-menu"
+          className={`absolute cursor-pointer translate-x-[9px] translate-y-[5px]  text-[#38BDF8] mt-[-20px] ml-[3px] bg-white md:hidden lg:hidden`}
+          onClick={toggleSidebar}
         >
-          <div className="py-1" role="none">
-            <Link
-              to="/"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              onClick={closeDropdown}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              onClick={closeDropdown}
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              onClick={closeDropdown}
-            >
-              Contact
-            </Link>
-          </div>
+          <FaBars />
         </div>
-      )}
+        <ul className="pt-6">
+          {Menus.map((Menu, index) => (
+            <li
+              key={index}
+              className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 ${
+                Menu.gap ? 'mt-2' : ''
+              } ${index === 0 && 'bg-light-white'}`}
+              style={{ height: '40px' }}
+            >
+              {Menu.dropdown ? (
+                <details>
+                  <summary
+                    className="flex items-center gap-x-2 cursor-pointer"
+                    onClick={handleDropdownClick}
+                  >
+                    {Menu.icon}
+                    {Menu.title}
+                  </summary>
+                  <ul className="p-2 bg-base-100 rounded-t-none">
+                    {Menu.items.map((item, i) => (
+                      <li key={i}>
+                        <Link to={item.link} className="text-white flex items-center gap-x-2">
+                          {item.icon}
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ) : (
+                <Link
+                  to={Menu.link}
+                  className="flex items-center gap-x-2 hover:translate-y-[-3px] duration-150 hover:text-[#38BDF8] text-[18px]"
+                >
+                  <img src={Menu.src} alt={Menu.title} />
+                  <span className={`${!isSidebarOpen && 'hidden'} origin-left duration-200`}>
+                    {Menu.title}
+                  </span>
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
 
-export default Dropdown;
+export default Sidebar;

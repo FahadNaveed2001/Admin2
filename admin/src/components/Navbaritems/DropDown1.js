@@ -1,22 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { IoNotifications } from "react-icons/io5";
-import { BsStack } from "react-icons/bs";
-import { IoStatsChart } from "react-icons/io5";
-import { TfiStatsUp } from "react-icons/tfi";
-import { MdQueryStats } from "react-icons/md";
-import { ImParagraphJustify } from "react-icons/im";
-import { ImStatsDots } from "react-icons/im";
-import { SiGraphql } from "react-icons/si";
-import { PiGraphBold } from "react-icons/pi";
-import { ImParagraphLeft } from "react-icons/im";
-import { MdOutlineGraphicEq } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
-import { RiDashboardFill } from "react-icons/ri";
-import { MdSwitchAccount } from "react-icons/md";
-import { MdOutlineForwardToInbox } from "react-icons/md";
-import { BiSpreadsheet } from "react-icons/bi";
-import { IoBarChart } from "react-icons/io5";
 import { HiOutlineCash } from "react-icons/hi";
 
 const Dropdown1 = () => {

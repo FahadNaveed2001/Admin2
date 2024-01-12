@@ -20,17 +20,15 @@ const App = () => {
     <Router>
     <Navbar />
  
-      <div className='h-screen w-screen flex bg-white md:w-screen overflow-x-hidden '>
+      <div className='flex bg-white'>
       <Sidebar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/inbox" element={<Inbox/>} />
           <Route path="/schedule" element={<Schedule/>} />
           <Route path="/files" element={<Files/>} />
-
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/charts" element={<Charts />} />
-
           <Route path="/notification-settings" element={<NotificationSettings/>} />
           <Route path="/billing-settings" element={<BillingSettings/>} />
           <Route path="/tester" element={<Tester />} />

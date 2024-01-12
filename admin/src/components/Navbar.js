@@ -31,7 +31,7 @@ const Navbar = () => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="md:w-[1280]  navbar bg-[white] h-[7vh] z-10 border-b-2">
+        <div className="navbar bg-[white] h-[7vh] z-10 border-b-2">
           <div className="flex-none lg:hidden md:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -92,7 +92,7 @@ const Navbar = () => {
             </form>
           </div>
 
-          <div className="flex items-center gap-3 translate-x-[-80px]">
+          <div className="flex items-center gap-3">
           <div>
           <Dropdown1 />
           </div>

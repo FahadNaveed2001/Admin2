@@ -5,7 +5,7 @@ import { IoLogoDropbox } from "react-icons/io5";
 
 const Files = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col lg:w-screen md:w-screen">
       <div className="flex flex-col font-bold text-[30px] w-screen md:flex-row items-center p-4 lg:w-screen md:w-screen md:text-[50px] lg:text-[50px]">
         File Manager
       </div>
@@ -82,8 +82,8 @@ const Files = () => {
       </div>
 
       {/* Div 2 */}
-      <div className="flex-1 bg-[#38bff818] rounded-2xl items-center p-4 h-16 md:h-24 lg:h-32  pr-[100px] lg:w-[screen] lg:pr-[100px]">
-        <table className="w-[90%]">
+      <div className="flex-1 bg-[#38bff818] rounded-2xl items-center p-2 h-16 md:h-24 lg:h-32 lg:w-screen lg:pr-[100px] md:w-screen">
+        <table className="w-[90%] ">
           <thead>
             <td className="text-center font-semibold">File Name</td>
             <td className="text-center font-semibold">Upload Date</td>

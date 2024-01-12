@@ -27,7 +27,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex bg-[#292929] h-full">
+    <div className="flex bg-[#292929] h-[130vh] sticky z-10">
       <div
         className={`${
           open ? "w-52" : "hidden md:w-20"

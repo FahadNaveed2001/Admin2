@@ -11,15 +11,16 @@ import Schedule from './components/Schedule';
 import Files from './components/Files';
 import NotificationSettings from "./components/Settings/NotificationSettings";
 import BillingSettings from "./components/Settings/BillingSettings";
-import TeamSettings from "./components/Settings/TeamSettings";
+
 import Tester from "./components/Tester"
+
 
 const App = () => {
   return (
     <Router>
     <Navbar />
  
-      <div className='h-screen w-screen flex bg-white overflow-x-hidden'>
+      <div className='h-screen w-screen flex bg-white md:w-screen overflow-x-hidden '>
       <Sidebar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -29,13 +30,14 @@ const App = () => {
 
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/charts" element={<Charts />} />
-          <Route path="/team-settings" element={<TeamSettings/>} />
+
           <Route path="/notification-settings" element={<NotificationSettings/>} />
           <Route path="/billing-settings" element={<BillingSettings/>} />
           <Route path="/tester" element={<Tester />} />
+
           
         </Routes>
-
+  
       </div>
     </Router>
   );

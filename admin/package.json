@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "^3.45.1",
     "classnames": "^2.5.1",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^10.18.0",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",

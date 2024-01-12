@@ -336,60 +336,9 @@ const Accounts = () => {
       <td>4/27/2021</td> 
       <td>Aquamarine</td>
     </tr>
-    <tr>
-      <th>35</th> 
-      <td>Moritz Dryburgh</td> 
-      <td>Dental Hygienist</td> 
-      <td>Schiller, Cole and Hackett</td> 
-      <td>Sri Lanka</td> 
-      <td>8/8/2020</td> 
-      <td>Crimson</td>
-    </tr>
-    <tr>
-      <th>36</th> 
-      <td>Reid Semiras</td> 
-      <td>Teacher</td> 
-      <td>Sporer, Sipes and Rogahn</td> 
-      <td>Poland</td> 
-      <td>7/30/2020</td> 
-      <td>Green</td>
-    </tr>
-    <tr>
-      <th>37</th> 
-      <td>Alec Lethby</td> 
-      <td>Teacher</td> 
-      <td>Reichel, Glover and Hamill</td> 
-      <td>China</td> 
-      <td>2/28/2021</td> 
-      <td>Khaki</td>
-    </tr>
-    <tr>
-      <th>38</th> 
-      <td>Aland Wilber</td> 
-      <td>Quality Control Specialist</td> 
-      <td>Kshlerin, Rogahn and Swaniawski</td> 
-      <td>Czech Republic</td> 
-      <td>9/29/2020</td> 
-      <td>Purple</td>
-    </tr>
-    <tr>
-      <th>39</th> 
-      <td>Teddie Duerden</td> 
-      <td>Staff Accountant III</td> 
-      <td>Pouros, Ullrich and Windler</td> 
-      <td>France</td> 
-      <td>10/27/2020</td> 
-      <td>Aquamarine</td>
-    </tr>
-    <tr>
-      <th>40</th> 
-      <td>Lorelei Blackstone</td> 
-      <td>Data Coordiator</td> 
-      <td>Witting, Kutch and Greenfelder</td> 
-      <td>Kazakhstan</td> 
-      <td>6/3/2020</td> 
-      <td>Red</td>
-    </tr>
+    
+ 
+ 
     </tbody> 
 
   </table>
@@ -397,7 +346,7 @@ const Accounts = () => {
     
     
     
-    
+
     
     
     

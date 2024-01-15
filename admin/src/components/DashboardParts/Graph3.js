@@ -45,7 +45,7 @@ const chartConfig = {
       },
       labels: {
         style: {
-          colors: "#616161",
+          colors: "#38BDF8",
           fontSize: "15px",
           fontFamily: "inherit",
           fontWeight: 500,
@@ -66,7 +66,7 @@ const chartConfig = {
     yaxis: {
       labels: {
         style: {
-          colors: "#616161",
+          colors: "#38BDF8",
           fontSize: "12px",
           fontFamily: "inherit",
           fontWeight: 400,
@@ -107,10 +107,10 @@ const Example = () => {
       >
 
         <div>
-         <h1 className=" text-[20px] font-bold">Sales Management</h1>
+         <h1 className=" text-[20px] font-bold dark:text-white">Sales Management</h1>
         </div>
       </CardHeader>
-      <CardBody className="px-2 pb-0 w-full">
+      <CardBody className="px-2 pb-0 w-full ">
         <Chart {...chartConfig} />
       </CardBody>
     </Card>

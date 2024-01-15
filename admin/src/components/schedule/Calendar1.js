@@ -26,12 +26,12 @@ const Calendar4 = () => {
             </table>
           </div>
         </div>
-        <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-[#38bff828] rounded-b">
+        <div className="md:py-8 py-5 md:px-16 px-5 bg-[#38bff828] rounded-b">
           <div className="px-4">
             <div className="border-b pb-4 border-gray-400 border-dashed">
               <p className="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">9:00 AM</p>
               <a tabIndex="0" className="focus:outline-none text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 mt-2">Zoom call with Design team</a>
-              <p className="text-sm pt-2 text-gray-600 dark:text-gray-300">Discussion on Design an their review</p>
+              <p className="text-sm pt-2 text-gray-600 dark:text-white">Discussion on Design an their review</p>
             </div>
             
 

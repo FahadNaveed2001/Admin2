@@ -40,7 +40,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   };
 
   return (
-    <div className="flex bg-[#292929] h-[120vh] z-20 mt-[50px]">
+    <div className="flex bg-[#292929] h-[120vh] z-20 mt-[50px] dark:bg-[#0c1522]">
       <div
         className={`${
           isSidebarOpen ? 'w-52' : 'hidden md:w-20'
@@ -65,7 +65,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             >
               {Menu.dropdown ? (
                 
-                <details className='h-[20px]'>
+                <details className='h-[0px]'>
                   <summary
                     className="flex items-center gap-x-2 cursor-pointer px-[1.4px] fixed"
                     onClick={handleDropdownClick}

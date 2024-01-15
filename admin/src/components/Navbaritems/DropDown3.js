@@ -67,7 +67,7 @@ const Dropdown1 = () => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 md:w-[500px] px-5"
+          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white dark:bg-[#142944] ring-1 ring-black ring-opacity-5 focus:outline-none z-20 md:w-[500px] px-5"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"

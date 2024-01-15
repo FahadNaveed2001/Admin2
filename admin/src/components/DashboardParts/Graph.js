@@ -33,7 +33,7 @@ const chartConfig = {
 
 const Graph = () => {
   return (
-    <Card className="items-center w-[390px] bg-[#38bff828] mx-5 lg:w-[270px] xl:w-[420px]"> 
+    <Card className="items-center w-[390px] bg-[#38bff828] mx-5 lg:w-[270px] xl:w-[420px] "> 
       <CardHeader
         floated={false}
         shadow={false}
@@ -42,7 +42,7 @@ const Graph = () => {
       >
 
         <div>
-         <h1 className=" text-[20px] lg:text-[15px] font-bold">Your Daily Statistical Reports</h1>
+         <h1 className=" text-[20px] lg:text-[15px] font-bold dark:text-white">Your Daily Statistical Reports</h1>
         </div>
       </CardHeader>
       <CardBody className="mt-4 grid place-items-center px-2">

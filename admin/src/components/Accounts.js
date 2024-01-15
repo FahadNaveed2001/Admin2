@@ -5,8 +5,8 @@ const Accounts = () => {
 
   
   return (
-    <div className=' p-1 h-[100vh] bg-white w-[390px] lg:w-[1100px] xl:w-[1750px] md:ml-[50px] md:mt-[50px] mt-[70px]'>
-    <div className=' text-[black] text-[20px] text-center font-bold md:text-start md:p-4 md:text-[50px]'><h1>Accounts Information</h1></div>
+    <div className=' p-1 h-[100vh]  w-[390px] lg:w-[1100px] xl:w-[1750px] md:ml-[50px] md:mt-[50px] mt-[70px]'>
+    <div className='  text-[20px] text-center font-bold md:text-start md:p-4 md:text-[50px]'><h1>Accounts Information</h1></div>
     
     
 
@@ -17,9 +17,9 @@ const Accounts = () => {
     
     
     <div className="overflow-x-auto">
-  <table className="table table-xs text-[black] mt-6 ">
+  <table className="table table-xs  mt-6 ">
     <thead>
-      <tr className='text-[black] text-[18px]'>
+      <tr className='dark:text-white text-[18px]'>
         <th></th> 
         <th>Name</th> 
         <th>Job</th> 
@@ -29,7 +29,7 @@ const Accounts = () => {
         <th>Favorite Color</th>
       </tr>
     </thead> 
-    <tbody className='text-black'>
+    <tbody>
       <tr>
         <th>1</th> 
         <td>Cy Ganderton</td> 

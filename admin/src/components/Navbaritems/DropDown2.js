@@ -58,49 +58,49 @@ const Dropdown2 = () => {
           aria-orientation="vertical"
           aria-labelledby="options-menu"
         >
-          <div className="grid grid-cols-3 gap-8 dropdown-content z-[1] menu p-5 shadow bg-base-100 rounded-box w-[250px] items-center" role="none">
+          <div className="grid grid-cols-3 gap-8 dropdown-content z-[1] menu p-5 shadow bg-base-100 rounded-box w-[250px] items-center dark:bg-[#142944] " role="none">
           <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <IoStatsChart />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <TfiStatsUp />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <MdQueryStats />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <ImParagraphJustify />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <ImStatsDots />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <SiGraphql />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <PiGraphBold />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <ImParagraphLeft />
           </a>
         </li>
         <li>
-          <a className="text-[25px] text-[#6B7280] items-center">
+          <a className="text-[25px] text-[#6B7280] dark:text-white items-center">
             <MdOutlineGraphicEq />
           </a>
         </li>

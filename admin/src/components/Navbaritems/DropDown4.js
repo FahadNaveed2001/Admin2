@@ -56,7 +56,7 @@ const Dropdown1 = () => {
           aria-orientation="vertical"
           aria-labelledby="options-menu"
         >
-          <div className="dropdown-content z-[5] menu p-2 shadow bg-base-100 rounded-b-lg w-52 divide-y divide-slate-700 " role="none">
+          <div className="dropdown-content z-[5] menu p-2 shadow bg-base-100 rounded-b-lg w-52 divide-y divide-slate-700 dark:bg-[#142944]" role="none">
           <li>
           <a className="text-[20px]">User@gmail.com</a>
         </li>

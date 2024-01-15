@@ -39,10 +39,10 @@ const NotificationSettings = () => {
 
       </div>
 
-      <div className="col-span-8 overflow-hidden rounded-xl bg-gray-50 px-8 shadow">
+      <div className="col-span-8 overflow-hidden rounded-xl px-8 shadow">
         <div className="border-b pt-4 pb-8">
           <h1 className="py-2 text-2xl font-semibold">Notification settings</h1>
-          <p className="font- text-slate-600">
+          <p className="font- text-slate-600 dark:text-white">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </p>
         </div>
@@ -50,10 +50,10 @@ const NotificationSettings = () => {
         </div>
         <div className="grid border-b py-6 sm:grid-cols-2">
           <div className="">
-            <h2 className="text-lg font-bold leading-4 text-slate-700">
+            <h2 className="text-lg font-bold leading-4 text-slate-700 dark:text-white">
               Comments
             </h2>
-            <p className="font- text-slate-600">
+            <p className="text-sm text-slate-600 dark:text-white">
               Lorem ipsum dolor, Alias eligendi laboriosam magni reiciendis
               neque.
             </p>
@@ -85,10 +85,10 @@ const NotificationSettings = () => {
 
         <div className="grid border-b py-6 sm:grid-cols-2">
         <div className="">
-          <h2 className="text-lg font-bold leading-4 text-slate-700">
+          <h2 className="text-lg font-bold leading-4 text-slate-700 dark:text-white">
             Added To Cart
           </h2>
-          <p className="font- text-slate-600">
+          <p className="text-sm text-slate-600 dark:text-white">
             Lorem ipsum dolor, Alias eligendi laboriosam magni reiciendis
             neque.
           </p>
@@ -119,12 +119,12 @@ const NotificationSettings = () => {
 
 
 
-      <div className="grid border-b py-6 sm:grid-cols-2">
+      <div className="grid border-b py-6 sm:grid-cols-2 ">
       <div className="">
-        <h2 className="text-lg font-bold leading-4 text-slate-700">
+        <h2 className="text-lg font-bold leading-4 text-slate-700 dark:text-white">
           Reviews
         </h2>
-        <p className="font- text-slate-600">
+        <p className="text-sm text-slate-600 dark:text-white">
           Lorem ipsum dolor, Alias eligendi laboriosam magni reiciendis
           neque.
         </p>
@@ -156,10 +156,10 @@ const NotificationSettings = () => {
 
     <div className="grid border-b py-6 sm:grid-cols-2">
     <div className="">
-      <h2 className="text-lg font-bold leading-4 text-slate-700">
+      <h2 className="text-lg font-bold leading-4 text-slate-700 dark:text-white">
         Inbox
       </h2>
-      <p className="font- text-slate-600">
+      <p className="text-sm text-slate-600 dark:text-white">
         Lorem ipsum dolor, Alias eligendi laboriosam magni reiciendis
         neque.
       </p>

@@ -26,7 +26,7 @@ const Calendar3 = () => {
           </table>
         </div>
         </div>
-        <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-[#38bff828] rounded-b">
+        <div className="md:py-8 py-5 md:px-16 px-5  bg-[#38bff828] rounded-b">
           <div className="px-4">
             <div className="border-b pb-4 border-gray-400 border-dashed">
               <p className="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">9:00 AM</p>

@@ -66,7 +66,7 @@ const chartConfig = {
     yaxis: {
       labels: {
         style: {
-          colors: "#616161",
+          colors: "#38BDF8",
           fontSize: "12px",
           fontFamily: "inherit",
           fontWeight: 400,
@@ -98,7 +98,7 @@ const chartConfig = {
 
 const Example = () => {
   return (
-    <Card className="w-[390px]  bg-[#38bff828] md:w-[1760px] md:mx-4 lg:w-[1130px] xl:w-[1760px]">
+    <Card className="w-[390px]  bg-[#38bff811] md:w-[1760px] md:mx-4 lg:w-[1130px] xl:w-[1760px]">
     <CardHeader
       floated={false}
       shadow={false}
@@ -106,7 +106,7 @@ const Example = () => {
       className="flex flex-col gap-2 md:flex-row md:items-center"
     >
       <div>
-        <h1 className="text-[20px] font-bold">Products</h1>
+        <h1 className="text-[20px] font-bold dark:text-white md:px-[20px]">Products</h1>
       </div>
     </CardHeader>
     <CardBody className="px-2 pb-0">

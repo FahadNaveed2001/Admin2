@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoNotifications } from "react-icons/io5";
 import { RiDashboardFill } from "react-icons/ri";
@@ -15,18 +15,27 @@ import { BiLogOutCircle } from "react-icons/bi";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoSettings } from "react-icons/io5";
 
+const Navbar = ({ isSidebarOpen, toggleSidebar, toggleDarkMode }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    setIsDarkMode(savedDarkMode === "true");
+  }, []);
+
+  const handleDarkModeToggle = () => {
+    localStorage.setItem("darkMode", !isDarkMode);
+    setIsDarkMode(!isDarkMode);
+    toggleDarkMode();
+  };
+
   return (
     <div className="drawer fixed z-40 ">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        
-        
-        <div className="navbar bg-[white] h-[7vh] z-3 border-b-2">
-          
-          
+
+        <div className="navbar bg-[white] dark:bg-[#0c1522] h-[7vh] z-3 border-b-[1px]">
           {/*sidebar open button*/}
           <button
             onClick={toggleSidebar}
@@ -66,14 +75,14 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
                 <input
                   type="text"
                   id="simple-search"
-                  className="h-[35px] w-[100px] md:w-[350px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="h-[35px] w-[100px] md:w-[350px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5 dark:bg-[#173248] dark:border-black dark:placeholder-white dark:text-white dark:focus:ring-[#38BDF8] dark:focus:border-blue-500"
                   placeholder="Search..."
                   required
                 />
               </div>
               <button
                 type="submit"
-                className=" p-2.5 ms-2 text-sm font-medium text-white bg-[#38BDF8] rounded-lg border transition duration-300 ease-in-out hover:bg-[#226581] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className=" p-2.5 ms-2 text-sm font-medium text-white bg-[#38BDF8] rounded-lg border transition duration-300 ease-in-out hover:bg-[#226581] focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
                 <svg
                   className="w-4 h-4"
@@ -96,9 +105,19 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
           </div>
 
           <div className="flex items-center gap-3">
+            <div className="mt-[5px] flex gap-2">
+              <h1 className="md:mt-[px] text-[13px]">DarkMode</h1>
+              <input
+          type="checkbox"
+          className="toggle toggle-sm toggle-info hover:bg-[#38BDF8] border-[#38BDF8]"
+          checked={isDarkMode}
+          onChange={handleDarkModeToggle}
+        />
+            </div>
             {/* <div>
               <Dropdown1 />
             </div> */}
+
             <div>
               <Dropdown2 />
             </div>
@@ -170,31 +189,30 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
             </a>
           </li>
 
-
           <li>
-          <details>
-          <summary>
-          <IoSettings /> Settings
-          </summary>
-          <ul className="bg-transparent rounded-t-none  ">
-          <li className="flex flex-row">
-            <a>
-              <Link to="/notification-settings" className="flex gap-2">
-                <IoNotifications className="mt-[5px]" />
-                Notification Settings
-              </Link>
-            </a>
-          </li>
-          <li>
-            <a>
-              <Link to="/billing-settings" className="flex gap-2">
-                <HiOutlineCash className="mt-[5px]" />
-                Billing Settings
-              </Link>
-            </a>
-          </li>
-          </ul>
-        </details>
+            <details>
+              <summary>
+                <IoSettings /> Settings
+              </summary>
+              <ul className="bg-transparent rounded-t-none  ">
+                <li className="flex flex-row">
+                  <a>
+                    <Link to="/notification-settings" className="flex gap-2">
+                      <IoNotifications className="mt-[5px]" />
+                      Notification Settings
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <Link to="/billing-settings" className="flex gap-2">
+                      <HiOutlineCash className="mt-[5px]" />
+                      Billing Settings
+                    </Link>
+                  </a>
+                </li>
+              </ul>
+            </details>
           </li>
 
           <li className="mt-[100%]">
@@ -205,7 +223,6 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
               </Link>
             </a>
           </li>
-          
         </ul>
       </div>
     </div>

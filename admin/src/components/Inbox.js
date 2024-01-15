@@ -2,7 +2,7 @@ import React from "react";
 
 const Inbox = () => {
   return (
-    <div className="ml-[20px] flex flex-col overflow-hidden">
+    <div className=" flex flex-col overflow-hidden md:mt-[50px] mt-[50px] md:ml-3">
       <h1 className="text-[20px] font-bold text-center pt-4 px-6 md:text-start md:text-[50px]">Inbox</h1>
       <main className="flex w-full h-full shadow-lg rounded-3xl items-center md:w-[98%]">
         <section className="flex flex-col pt-3 w-[500px] bg-[#38bff80e] h-full lg:w-screen md:w-screen md:items-center]">

@@ -18,7 +18,7 @@ import { IoSettings } from "react-icons/io5";
 
 const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
-    <div className="drawer ">
+    <div className="drawer fixed z-40 ">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
@@ -96,9 +96,9 @@ const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
           </div>
 
           <div className="flex items-center gap-3">
-            <div>
+            {/* <div>
               <Dropdown1 />
-            </div>
+            </div> */}
             <div>
               <Dropdown2 />
             </div>

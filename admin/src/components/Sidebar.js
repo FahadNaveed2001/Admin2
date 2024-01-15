@@ -40,7 +40,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   };
 
   return (
-    <div className="flex bg-[#292929] h-[120vh] z-20 ">
+    <div className="flex bg-[#292929] h-[120vh] z-20 mt-[50px]">
       <div
         className={`${
           isSidebarOpen ? 'w-52' : 'hidden md:w-20'
@@ -67,7 +67,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 
                 <details>
                   <summary
-                    className="flex items-center gap-x-2 cursor-pointer px-[1.4px] fixed top-[390px] h-[20px]"
+                    className="flex items-center gap-x-2 cursor-pointer px-[1.4px] fixed top-[375px]"
                     onClick={handleDropdownClick}
                   >
                     <div className='text-[13px] p-[2px] text-[#38BDF8] border-solid border-2 border-[#dadada] rounded-md'>{Menu.icon}</div>
@@ -76,7 +76,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                   {isSidebarOpen && <ul className="p-2 bg-transparent rounded-t-none mt-[120px]">
                     {Menu.items.map((item, i) => (
                       <motion.li key={i} >
-                        <Link to={item.link} className={`text-white flex items-center gap-x-3 mt-[10px] ${
+                        <Link to={item.link} className={`text-white flex items-center gap-x-3 mt-[5px] px-3 rounded-lg ${
                           location.pathname === item.link ? 'bg-gray-500' : ''
                         }`}>
                           <div className='text-[17px] text-[#38BDF8]'>{item.icon}</div>

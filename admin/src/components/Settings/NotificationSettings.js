@@ -17,7 +17,7 @@ const NotificationSettings = () => {
     }));
   };
   return (
-    <div className="min-h-screen w-[400] overflow-hidden md:w-screen">
+    <div className="min-h-screen w-[400] overflow-hidden md:w-screen md:mt-[50px] mt-[50px]">
 
 
     <h1 className="border-b py-6 text-4xl font-semibold text-center md:text-start lg:text-start md:pl-[40px]" >Settings</h1>

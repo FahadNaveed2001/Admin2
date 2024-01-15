@@ -9,7 +9,7 @@ import Calendar6 from "./schedule/Calender6";
 const Schedule = () => {
   return (
 
-    <div className="flex flex-col w-[400px] md:flex-row lg:w-[1100px]  xl:w-[1750px] overflow-hidden">
+    <div className="flex flex-col w-[400px] md:flex-row lg:w-[1100px]  xl:w-[1750px] overflow-hidden md:mt-[60px] mt-[70px]">
  
     <div className="flex flex-col w-[100%]">
     <div className="text-center text-[#000000] text-[20px] font-bold md:text-start md:text-[40px] md:mx-5"><h1>Week's Schedule</h1></div>

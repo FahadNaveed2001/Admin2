@@ -65,15 +65,15 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             >
               {Menu.dropdown ? (
                 
-                <details>
+                <details className='h-[20px]'>
                   <summary
-                    className="flex items-center gap-x-2 cursor-pointer px-[1.4px] fixed top-[375px]"
+                    className="flex items-center gap-x-2 cursor-pointer px-[1.4px] fixed"
                     onClick={handleDropdownClick}
                   >
                     <div className='text-[13px] p-[2px] text-[#38BDF8] border-solid border-2 border-[#dadada] rounded-md'>{Menu.icon}</div>
                     <div className='text-[18px]'>{isSidebarOpen && Menu.title}</div>
                   </summary>
-                  {isSidebarOpen && <ul className="p-2 bg-transparent rounded-t-none mt-[120px]">
+                  {isSidebarOpen && <ul className="p-2 bg-transparent rounded-t-none mt-[20px]">
                     {Menu.items.map((item, i) => (
                       <motion.li key={i} >
                         <Link to={item.link} className={`text-white flex items-center gap-x-3 mt-[5px] px-3 rounded-lg ${

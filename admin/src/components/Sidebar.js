@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaCaretDown } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 import ChartIcon from './assets/Chart.png';
 import ChatIcon from './assets/Chat.png';
 import UserIcon from './assets/User.png';
@@ -9,8 +9,11 @@ import FolderIcon from './assets/Folder.png';
 import { IoSettings } from "react-icons/io5";
 import { IoNotifications } from "react-icons/io5";
 import { HiOutlineCash } from "react-icons/hi";
+import { motion } from 'framer-motion';
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
+  const location = useLocation();
+
   const Menus = [
     { title: 'Dashboard', src: ChartIcon, link: '/' },
     { title: 'Accounts', src: UserIcon, gap: true, link: '/accounts' },
@@ -37,7 +40,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   };
 
   return (
-    <div className="flex bg-[#292929] h-[120vh] z-20 mt-">
+    <div className="flex bg-[#292929] h-[120vh] z-20 ">
       <div
         className={`${
           isSidebarOpen ? 'w-52' : 'hidden md:w-20'
@@ -49,39 +52,46 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
         >
           <FaBars />
         </div>
-        <ul className="pt-6">
+        <ul className="pt-6 fixed">
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-white text-sm items-center gap-x-4 ${
+              className={`flex rounded-md p-2 cursor-pointer text-white text-sm items-center gap-x-4 ${
                 Menu.gap ? 'mt-2' : ''
-              } ${index === 0 && 'bg-light-white'}`}
+              } ${index === 0 && 'bg-light-white'} ${
+                location.pathname === Menu.link ? 'bg-gray-500' : ''
+              }`}
               style={{ height: '40px' }}
             >
               {Menu.dropdown ? (
+                
                 <details>
                   <summary
-                    className="flex items-center gap-x-2 cursor-pointer "
+                    className="flex items-center gap-x-2 cursor-pointer px-[1.4px] fixed top-[390px] h-[20px]"
                     onClick={handleDropdownClick}
                   >
-                    {Menu.icon}
-                    {Menu.title}
+                    <div className='text-[13px] p-[2px] text-[#38BDF8] border-solid border-2 border-[#dadada] rounded-md'>{Menu.icon}</div>
+                    <div className='text-[18px]'>{isSidebarOpen && Menu.title}</div>
                   </summary>
-                  <ul className="p-2 bg-transparent rounded-t-none">
+                  {isSidebarOpen && <ul className="p-2 bg-transparent rounded-t-none mt-[120px]">
                     {Menu.items.map((item, i) => (
-                      <li key={i}>
-                        <Link to={item.link} className="text-white flex items-center gap-x-2">
-                          {item.icon}
-                          {item.title}
+                      <motion.li key={i} >
+                        <Link to={item.link} className={`text-white flex items-center gap-x-3 mt-[10px] ${
+                          location.pathname === item.link ? 'bg-gray-500' : ''
+                        }`}>
+                          <div className='text-[17px] text-[#38BDF8]'>{item.icon}</div>
+                          <div className='text-[15px] p-2'>{item.title}</div>
                         </Link>
-                      </li>
+                      </motion.li>
                     ))}
-                  </ul>
+                  </ul>}
                 </details>
               ) : (
                 <Link
                   to={Menu.link}
-                  className="flex items-center gap-x-2 hover:translate-y-[-3px] duration-150 hover:text-[#38BDF8] text-[18px]"
+                  className={`flex items-center gap-x-2 hover:translate-y-[-3px] duration-150 hover:text-[#38BDF8] text-[18px] ${
+                    location.pathname === Menu.link ? 'hover:bg-gray-500' : ''
+                  }`}
                 >
                   <img src={Menu.src} alt={Menu.title} />
                   <span className={`${!isSidebarOpen && 'hidden'} origin-left duration-200`}>
